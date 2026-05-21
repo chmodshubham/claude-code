@@ -16,7 +16,7 @@ npm -v
 sudo apt remove -y nodejs npm
 
 # Install NodeSource Node.js 18 (or newer)
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt install -y nodejs
 
 # Verify installation
@@ -60,3 +60,35 @@ To use Claude Code in VS Code, install the extension:
 
 * **Extension Name**: Claude Code for VSCode
 * **Marketplace Link**: https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code
+
+## 4. Plugins
+
+[everything-claude-code](https://github.com/affaan-m/ECC)
+
+```bash
+claude code
+# Add marketplace
+/plugin marketplace add https://github.com/affaan-m/ECC
+
+# Install plugin
+/plugin install ecc@ecc
+```
+
+[rtk](https://github.com/rtk-ai/rtk)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/refs/heads/master/install.sh | sh
+
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc 
+```
+
+[caveman](https://github.com/juliusbrussee/caveman)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash
+
+# to activate
+claude code
+/caveman
+```
